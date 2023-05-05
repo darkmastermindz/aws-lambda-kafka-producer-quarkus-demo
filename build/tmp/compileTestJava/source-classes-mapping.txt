@@ -1,0 +1,4 @@
+org/acme/aws/lambda/AWSLambdaHandlerTest.java
+ org.acme.aws.lambda.AWSLambdaHandlerTest
+org/acme/aws/lambda/AWSLambdaHandlerTestIT.java
+ org.acme.aws.lambda.AWSLambdaHandlerTestIT
