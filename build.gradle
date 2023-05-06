@@ -18,10 +18,21 @@ dependencies {
     implementation 'org.apache.camel.quarkus:camel-quarkus-core:2.16.0'
     implementation 'org.apache.camel.quarkus:camel-quarkus-direct:2.16.0'
     implementation 'org.apache.camel.quarkus:camel-quarkus-log:2.16.0'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-kafka:2.16.0'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-microprofile-health:2.16.0'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-log:2.16.0'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-timer:2.16.0'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-seda:2.16.0'
+    implementation 'io.quarkus:quarkus-resteasy-jackson:2.16.0.Final'
+    implementation 'io.quarkus:quarkus-kubernetes-config:2.16.0.Final'
+    implementation 'io.strimzi:kafka-oauth-client:0.11.0'
     implementation 'io.quarkus:quarkus-amazon-lambda:2.16.0.Final'
     implementation 'io.quarkus:quarkus-arc:2.16.0.Final'
+
     testImplementation 'io.quarkus:quarkus-junit5:2.16.0.Final'
     testImplementation 'io.rest-assured:rest-assured:4.5.1'
+    testImplementation 'org.awaitility:awaitility:4.2.0'
+    testImplementation 'org.testcontainers:testcontainers:1.17.6'
 }
 
 group = 'org.apache.camel.quarkus.examples'

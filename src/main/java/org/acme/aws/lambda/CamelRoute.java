@@ -23,15 +23,15 @@ import org.apache.camel.builder.RouteBuilder;
 
 @ApplicationScoped
 public class CamelRoute extends RouteBuilder {
-
     @Inject
-    GreetService greetService;
+    KafkaProducerService kafkaProducerService;
 
     @Override
-    public void configure() {
-        from("direct:input").routeId("Test")
-                .log("Inside Camel Route Received Payload ==> ${body}")
-                .setBody().body(Person.class, p -> greetService.greet(p.getName()))
+    public void configure() {        
+        from("direct:input").routeId("TestKafkaProducer")
+                .log("Inside Camel Route Received Producer Payload ==> ${body}")
+                .setBody().body(String.class, s -> kafkaProducerService.produce(s))
+                .to("kafka:{{kafka.topic}}?brokers={{kafka.brokers}}")
                 .end();
     }
 }

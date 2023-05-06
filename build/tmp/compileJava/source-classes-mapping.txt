@@ -1,8 +1,0 @@
-org/acme/aws/lambda/CamelRoute.java
- org.acme.aws.lambda.CamelRoute
-org/acme/aws/lambda/AWSLambdaHandler.java
- org.acme.aws.lambda.AWSLambdaHandler
-org/acme/aws/lambda/GreetService.java
- org.acme.aws.lambda.GreetService
-org/acme/aws/lambda/Person.java
- org.acme.aws.lambda.Person
