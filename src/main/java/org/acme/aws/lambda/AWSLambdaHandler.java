@@ -25,13 +25,13 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.apache.camel.ProducerTemplate;
 
 @Named("awsLambdaHandler")
-public class AWSLambdaHandler implements RequestHandler<Person, String> {
+public class AWSLambdaHandler implements RequestHandler<String, String> {
 
     @Inject
     ProducerTemplate template;
 
     @Override
-    public String handleRequest(Person input, Context context) {
+    public String handleRequest(String input, Context context) {
         LambdaLogger logger = context.getLogger();
         logger.log("Calling Camel Route :)");
         return template.requestBody("direct:input", input, String.class);
